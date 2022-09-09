@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">imc2.0</string>
+    <string name="sub_title_name">Calcular</string>
+    <string name="title_name">IMC</string>
+    <string name="logo_name">SENAI</string>
+    <string name="login">Entrar</string>
+    <string name="sing_up">Registrar-se</string>
+    <string name="text_edit_email_placeholder">Seu e-mail</string>
+    <string name="text_edit_password_placeholder">Sua senha</string>
+    <string name="title_singup_activity">Crie um novo usuário</string>
+    <string name="name_register">Nome:</string>
+    <string name="email_register">Email:</string>
+    <string name="password_register">Senha:</string>
+    <string name="weight_resgister">Peso: </string>
+    <string name="height_resgister">Altura: </string>
+    <string name="button_sing_up">Crie um novo usuário!</string>
+    <string name="user_name">Nome do usuário</string>
+    <string name="user_email">email@do.user.com</string>
+    <string name="user_weight">Peso: 00.0</string>
+    <string name="user_height">Altura: 0.00</string>
+    <string name="calculate_button">Calcular</string>
+    <string name="message_calculate_bmi_activity">Vamos Calcular O Seu Índice De Masssa Corporal Agora?</string>
+    <string name="result_title_text">Esse é seu resultado do IMC</string>
+</resources>

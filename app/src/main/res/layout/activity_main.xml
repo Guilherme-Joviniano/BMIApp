@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/title_name"
+        android:textColor="@color/red_senai"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_subtitle_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/sub_title_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/app_title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/app_title_text_view" />
+
+    <TextView
+        android:id="@+id/login_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddresSingIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/footer_background"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0"
+            android:text="@string/logo_name"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextEmailAddresSingIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="24sp"
+        android:drawableTint="@color/black"
+        android:ems="10"
+        android:hint="@string/text_edit_email_placeholder"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordSingIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/login_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_text_view"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextPasswordSingIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="24sp"
+        android:drawableTint="@color/black"
+        android:ems="10"
+        android:hint="@string/text_edit_password_placeholder"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSingIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/login_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddresSingIn" />
+
+    <Button
+        android:id="@+id/buttonSingIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_button"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_sing_up"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordSingIn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordSingIn"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSingIn"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/text_view_sing_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/background_text_view_sing_up"
+        android:padding="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="45dp"
+        android:text="@string/sing_up"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSingIn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

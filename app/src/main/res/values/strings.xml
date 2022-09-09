@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">imc2.0</string>
+    <string name="sub_title_name">Calculate</string>
+    <string name="title_name">BMI</string>
+    <string name="logo_name">SENAI</string>
+    <string name="login">Login</string>
+    <string name="sing_up">Sing-up</string>
+    <string name="text_edit_email_placeholder">Your e-mail</string>
+    <string name="text_edit_password_placeholder">Your password</string>
+    <string name="title_singup_activity">Sing Up A New User</string>
+    <string name="name_register">Name:</string>
+    <string name="email_register">Email:</string>
+    <string name="password_register">Password:</string>
+    <string name="weight_resgister">Weight: </string>
+    <string name="height_resgister">Height: </string>
+    <string name="button_sing_up">Create a new user!</string>
+    <string name="user_name">Name of the user</string>
+    <string name="user_email">email@do.user.com</string>
+    <string name="user_weight">Weight: 00.0</string>
+    <string name="user_height">Height: 0.00</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="message_calculate_bmi_activity">Let\'s Calculate Yours Body Mass Indice Now?</string>
+    <string name="result_title_text">This is yours BMI result!</string>
+</resources>
