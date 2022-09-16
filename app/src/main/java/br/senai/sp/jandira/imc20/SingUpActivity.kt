@@ -5,33 +5,21 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import br.senai.sp.jandira.imc20.databinding.ActivitySingUpBinding
 import br.senai.sp.jandira.imc20.models.User
 import java.util.concurrent.atomic.AtomicLong
 
 class SingUpActivity : AppCompatActivity() {
 
     private val counter: AtomicLong = AtomicLong()
-
-    lateinit var editName: EditText
-    lateinit var editEmail: EditText
-    lateinit var editPassword: EditText
-    lateinit var editWeight: EditText
-    lateinit var editHeight: EditText
-    lateinit var buttonSave: Button
+    private lateinit var binding: ActivitySingUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar!!.hide()
         setContentView(R.layout.activity_sing_up)
 
-        editName = findViewById(R.id.editTextName)
-        editEmail = findViewById(R.id.editTextEmail)
-        editPassword = findViewById(R.id.editTextPassword)
-        editWeight = findViewById(R.id.editTextWeight)
-        editHeight = findViewById(R.id.editTextHeight)
-        buttonSave = findViewById(R.id.buttonSingUp);
-
-        buttonSave.setOnClickListener {
+        binding.buttonSingUp.setOnClickListener {
             saveUser()
         }
     }
@@ -39,11 +27,11 @@ class SingUpActivity : AppCompatActivity() {
     private fun  saveUser() {
         val user = User(
             id = counter.incrementAndGet(),
-            name = editName.text.toString(),
-            email = editEmail.text.toString(),
-            password = editPassword.text.toString(),
-            weight = editWeight.text.toString().toDouble(),
-            height = editHeight.text.toString().toDouble(),
+            name = binding.editTextName.text.toString(),
+            email = binding.editTextEmail.text.toString(),
+            password = binding.editTextPassword.text.toString(),
+            weight = binding.editTextWeight.text.toString().toDouble(),
+            height = binding.editTextHeight.text.toString().toDouble(),
         );
 
         val dados = getSharedPreferences("dados", MODE_PRIVATE)
