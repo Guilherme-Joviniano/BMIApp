@@ -37,16 +37,14 @@ class SingUpActivity : AppCompatActivity() {
     }
 
     private fun  saveUser() {
-        val user = User()
-
-        user.id = counter.incrementAndGet();
-        user.name = editName.text.toString()
-        user.email = editEmail.text.toString()
-        user.password = editPassword.text.toString()
-        user.weight = editWeight.text.toString().toDouble()
-        user.height = editHeight.text.toString().toDouble()
-
-        // Gravar o user no shared preferences
+        val user = User(
+            id = counter.incrementAndGet(),
+            name = editName.text.toString(),
+            email = editEmail.text.toString(),
+            password = editPassword.text.toString(),
+            weight = editWeight.text.toString().toDouble(),
+            height = editHeight.text.toString().toDouble(),
+        );
 
         val dados = getSharedPreferences("dados", MODE_PRIVATE)
 

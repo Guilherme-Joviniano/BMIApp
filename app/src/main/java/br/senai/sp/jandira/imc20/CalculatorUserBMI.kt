@@ -8,28 +8,25 @@ import br.senai.sp.jandira.imc20.databinding.ActivityCalculateUserBmiBinding
 
 class CalculatorUserBMI : AppCompatActivity() {
     private lateinit var binding: ActivityCalculateUserBmiBinding
+
     private var weightForm = 0F;
     private var  heightForm = 0F;
-    private fun getProfile() {
-        val dados = getSharedPreferences("dados", MODE_PRIVATE)
 
-        val name = dados.getString("name", "")
-        val email = dados.getString("email", "")
-        val weight = dados.getFloat("weight", 0F).toString()
-        val height = dados.getFloat("height", 0F).toString()
+    private fun getProfile() {
+        val data = getSharedPreferences("dados", MODE_PRIVATE)
+
+        val name = data.getString("name", "")
+        val email = data.getString("email", "")
+        val weight = data.getFloat("weight", 0F).toString()
+        val height = data.getFloat("height", 0F).toString()
 
         binding.textViewName.text = name.toString()
         binding.textViewEmail.text = email.toString()
 
-
         binding.textViewWeight.text = "Peso: $weight"
         binding.textViewHeight.text = "Altura: $height"
 
-
-
     }
-
-
 
     private fun updateData() {
         val editor = getSharedPreferences("dados", MODE_PRIVATE);
